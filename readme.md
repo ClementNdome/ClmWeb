@@ -45,7 +45,6 @@ Expert GIS Developer & Geospatial Software Engineer specializing in creating sim
 
 *   **LinkedIn:** [Clement Ndome](https://www.linkedin.com/in/clement-ndome-a3b968354/)
 *   **GitHub:** [@ClementNdome](https://github.com/ClementNdome)
-*   **Website:** [SpatioNEX](https://spationex.com)
 
 ---
 © 2024 Clement Ndome | All Rights Reserved.
