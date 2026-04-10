@@ -37,7 +37,8 @@ Spatial analytics system to assess education infrastructure distribution.
 
 ## 💼 Professional Summary
 
-Expert GIS Developer & Geospatial Software Engineer specializing in creating simple, clean, and highly visual interactive mapping applications. I design top-down/satellite-style interfaces with clickable elements, status indicators, and real-time user actions.
+**WebGIS Developer**
+I build fast, mobile-friendly interactive mapping applications with clean, satellite-style interfaces. Focused on real-time data, clickable workflows, and practical tools for infrastructure and planning.
 
 **Currently:** GIS Developer at **ForbSpace Inc.**
 
