@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JZ5HXWXPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4JZ5HXWXPW');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clement Ndome | WebGIS & Interactive Mapping Developer</title>
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="my-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="my-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="my-favicon/site.webmanifest" />
+
+  <!-- Preload Key Assets for Performance -->
+  <link rel="preload" as="image" href="images/clemoo-share.webp">
+  <link rel="preload" as="image" href="image.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Google Fonts - Inter (Clean Sans-serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Enhanced SEO Meta Tags -->
+  <meta name="description"
+    content="Clement Ndome: Expert GIS Developer & Geospatial Software Engineer specializing in ESRI Suite, Python, AI-driven spatial solutions, and co-founder of SpatioNEX.">
+  <meta name="keywords"
+    content="GIS Developer, Geospatial Software Engineer, ArcGIS Expert, Python Django, Remote Sensing, Web GIS, AI Geospatial, SpatioNEX, Climate Resilience, Spatial Analytics">
+  <meta name="author" content="Clement Ndome">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Clement Ndome | GIS Developer & Geospatial Software Engineer" />
+  <meta property="og:description"
+    content="Expert GIS Developer & Geospatial Software Engineer specializing in ESRI Suite, Python, AI-driven spatial solutions, and co-founder of SpatioNEX." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clementndome.github.io/ClmNios/" />
+  <meta property="og:image" content="https://clementndome.github.io/ClmNios/images/clemoo-share.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clement Ndome | GIS Developer & Geospatial Software Engineer" />
+  <meta name="twitter:description"
+    content="Expert GIS Developer & Geospatial Software Engineer specializing in ESRI Suite, Python, AI-driven spatial solutions, and co-founder of SpatioNEX." />
+  <meta name="twitter:image" content="https://clementndome.github.io/ClmNios/images/clemoo-share.webp" />
+
+  <!-- Structured Data for SEO (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Clement Ndome",
+    "jobTitle": "GIS Developer & Geospatial Software Engineer",
+    "url": "https://clementndome.github.io/ClmNios/",
+    "sameAs": [
+      "https://github.com/ClementNdome",
+      "https://www.linkedin.com/in/clement-ndome-a3b968354/",
+      "https://spationex.com"
+    ],
+    "description": "Expert GIS Developer & Geospatial Software Engineer specializing in ESRI Suite, Python, AI-driven spatial solutions, and co-founder of SpatioNEX.",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "SpatioNEX",
+      "url": "https://spationex.com"
+    }
+  }
+  </script>
+
+  <!-- SpatioNEX Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SpatioNEX",
+    "url": "https://spationex.com",
+    "description": "Geospatial intelligence platform empowering decision-makers with automated spatial analytics for climate resilience",
+    "foundingDate": "2025",
+    "address": {
+      "@type": "PostalAddress", 
+      "addressRegion": "Africa"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@spationex.com",
+      "contactType": "customer service",
+      "areaServed": "AF",
+      "availableLanguage": ["en"]
+    },
+    "sameAs": [
+      "https://linkedin.com/company/spationex",
+      "https://twitter.com/spationex",
+      "https://github.com/SpatioNEX"
+    ],
+    "knowsAbout": [
+      "Geospatial Intelligence",
+      "Spatial Analytics",
+      "Climate Resilience", 
+      "Satellite Data Analysis",
+      "Automated Intelligence",
+      "Environmental Monitoring"
+    ],
+    "areaServed": ["Africa"]
+  }
+  </script>
+
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url('image.png') no-repeat center center/cover;
+      background-size: cover;
+      background-attachment: fixed;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .light-mode {
+      --bg-primary: #f9fafb;
+      --text-primary: #1f2937;
+      --text-secondary: #4b5563;
+      --bg-card: #ffffff;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --btn-bg: #3b82f6;
+      --btn-text: #ffffff;
+      --nav-bg: rgba(255, 255, 255, 0.95);
+      --overlay-bg: rgba(255, 255, 255, 0.85);
+      --progress-bg: rgba(0, 0, 0, 0.1);
+      --progress-fill: #3b82f6;
+      --accent-color: #3b82f6;
+    }
+
+    .dark-mode {
+      --bg-primary: #111827;
+      --text-primary: #f9fafb;
+      --text-secondary: #d1d5db;
+      --bg-card: #1f2937;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+      --btn-bg: #3b82f6;
+      --btn-text: #ffffff;
+      --nav-bg: rgba(17, 24, 39, 0.95);
+      --overlay-bg: rgba(0, 0, 0, 0.7);
+      --progress-bg: rgba(255, 255, 255, 0.2);
+      --progress-fill: #60a5fa;
+      --accent-color: #60a5fa;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    .overlay {
+      background: var(--overlay-bg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: background 0.3s;
+    }
+
+    .project-card,
+    .experience-card {
+      background-color: var(--bg-card);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .project-card:hover,
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--accent-color);
+      border: 1.5px solid var(--accent-color);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .nav-bg {
+      background-color: var(--nav-bg);
+      backdrop-filter: blur(10px);
+    }
+
+    .footer-bg {
+      background-color: var(--nav-bg);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--progress-bg);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--progress-fill);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .skill-card {
+      background-color: var(--bg-card);
+      box-shadow: var(--shadow);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      padding: 1.5rem;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    }
+
+    .accent-text {
+      color: var(--accent-color);
+    }
+
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none !important;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .grid-cols-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+      }
+
+      /* Fixed mobile menu styles */
+      #mobile-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      #mobile-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      #mobile-menu li {
+        text-align: center;
+        padding: 0.75rem 0;
+      }
+
+      #mobile-menu a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Desktop Menu */
+    @media (min-width: 769px) {
+      .mobile-menu {
+        display: none !important;
+      }
+
+      .desktop-menu {
+        display: flex !important;
+      }
+    }
+
+    /* Bouncy Scroll Indicator */
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-10px);
+      }
+
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Gradient text effect */
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white relative dark-mode">
+  <div class="overlay"></div>
+
+  <!-- Navbar -->
+  <nav class="py-4 px-6 flex justify-between items-center nav-bg relative z-50 sticky top-0">
+    <a href="#"><h1 class="text-2xl font-bold accent-text">Clement Ndome</h1></a>
+
+    <div class="flex items-center space-x-6">
+      <button id="theme-toggle" class="px-4 py-2 rounded-lg bg-gray-700 text-white transition-all hover:scale-105">
+        <i class="fas fa-moon"></i>
+      </button>
+      <!-- Desktop Menu - Hidden on mobile -->
+      <ul class="desktop-menu flex space-x-6 items-center">
+        <li><a href="#projects" class="hover:text-gray-300 transition-colors font-medium">Projects</a></li>
+        <li><a href="#skills" class="hover:text-gray-300 transition-colors font-medium">Skills</a></li>
+        <li><a href="#experience" class="hover:text-gray-300 transition-colors font-medium">Experience</a></li>
+        <li><a href="#contact" class="hover:text-gray-300 transition-colors font-medium">Contact</a></li>
+      </ul>
+      <!-- Mobile Hamburger Menu - Hidden on desktop -->
+      <button id="mobile-toggle" class="mobile-menu hidden text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu (now positioned outside of nav) -->
+  <ul id="mobile-menu" class="mobile-menu hidden">
+    <li><a href="#projects" class="hover:text-gray-300 font-medium">Projects</a></li>
+    <li><a href="#skills" class="hover:text-gray-300 font-medium">Skills</a></li>
+    <li><a href="#experience" class="hover:text-gray-300 font-medium">Experience</a></li>
+    <li><a href="#contact" class="hover:text-gray-300 font-medium">Contact</a></li>
+  </ul>
+
+  <!-- Hero Section -->
+  <section class="text-center py-24 relative" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Clement Ndome</h1>
+      <p class="text-2xl md:text-3xl font-semibold mb-6 -text"><i>WebGIS & Interactive Mapping Developer</i></p>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        I am a GIS/WebGIS Developer specializing in creating simple, clean, and highly visual interactive mapping applications. I design top-down/satellite-style interfaces with clickable elements, status indicators, and real-time user actions. My focus is on fast, mobile-friendly solutions for infrastructure and planning use cases.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#projects" class="btn-primary px-6 py-3 rounded-lg">
+          Explore My Projects
+        </a>
+        <a href="#contact" class="btn-secondary px-8 py-3 rounded-lg font-semibold text-lg">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+    <a href="#projects" class="mt-16 text-gray-500 scroll-indicator inline-block hover:text-white transition-colors">
+      <i class="fas fa-arrow-down text-2xl"></i>
+    </a>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-16 relative" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-4 section-title">Selected WebGIS Projects</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg">Interactive maps, spatial analytics, and infrastructure visualization</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <!-- Project 1: Kenya Airports WebGIS -->
+      <div class="project-card">
+        <a href="https://clementn.leapcell.app/" target="_blank">
+          <img src="https://raw.githubusercontent.com/ClementNdome/ClmNios/main/images/airports.png"
+            alt="Interactive WebGIS map of Kenya airports and airstrips"
+            class="w-full h-48 object-cover">
+        </a>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">Kenya Airports WebGIS</h3>
+          <p class="text-gray-300 mb-4">Live interactive national-scale WebGIS platform for visualizing and analyzing airports and airstrips across Kenya. Features advanced filters, spatial queries, clickable infrastructure points, and proximity analysis. Built with Django/GeoDjango, PostGIS, Leaflet.js, HTML/CSS/JS.</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://github.com/ClementNdome/Kenya-Airports" target="_blank"
+              class="btn-secondary px-4 py-2 rounded-lg text-sm">
+              GitHub
+            </a>
+            <a href="https://clementn.leapcell.app/" target="_blank"
+              class="btn-primary px-4 py-2 rounded-lg text-sm">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: ForbSpace Inc — Navigator -->
+      <div class="project-card">
+        <a href="https://forbspace-inc.github.io/ForbSpace-Inc/" target="_blank">
+          <img src="images/agriinsight.png"
+            alt="Real-time interactive map navigator"
+            class="w-full h-48 object-cover">
+        </a>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">ForbSpace Inc — Navigator</h3>
+          <p class="text-gray-300 mb-4">Real-time interactive map navigator with GPS tracking, basemap switching, 3D terrain toggle, recenter controls, and mobile-friendly interface. Demonstrates clean map UI design and direct user interaction.</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://forbspace-inc.github.io/ForbSpace-Inc/" target="_blank"
+              class="btn-primary px-4 py-2 rounded-lg text-sm">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Interactive Leaflet Web Maps -->
+      <div class="project-card">
+        <a href="https://clementndome.github.io/creating-web-maps/" target="_blank">
+          <img src="images\image.png"
+            alt="Simple Leaflet web map demonstration"
+            class="w-full h-48 object-cover">
+        </a>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">Interactive Leaflet Web Maps</h3>
+          <p class="text-gray-300 mb-4">Simple, clean demonstration of Leaflet.js capabilities including spatial measurement tools, base layers, and interactive map controls. Perfect foundation for custom visual overlays and clickable elements.</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://github.com/ClementNdome/creating-web-maps" target="_blank"
+              class="btn-secondary px-4 py-2 rounded-lg text-sm">
+              GitHub
+            </a>
+            <a href="https://clementndome.github.io/creating-web-maps/" target="_blank"
+              class="btn-primary px-4 py-2 rounded-lg text-sm">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Kenya Schools Locator -->
+      <div class="project-card">
+        <a href="https://webgis-schools.onrender.com/" target="_blank">
+          <img src="https://github.com/ClementNdome/ClmNios/blob/main/images/schools.png?raw=true"
+            alt="Kenya Schools Locator map"
+            class="w-full h-48 object-cover">
+        </a>
+        <div class="p-6">
+          <h3 class="text-xl font-bold mb-3">Kenya Schools Locator</h3>
+          <p class="text-gray-300 mb-4">Built a spatial analytics system to assess the distribution and accessibility of education infrastructure across Kenya using Flask, PostGIS, and Leaflet. The tool supports regional coverage analysis and planning insights, enabling stakeholders to identify spatial gaps and make evidence-based infrastructure decisions. Designed as a fast-deployable analytics solution for public-sector use cases.</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://github.com/ClementNdome/webgis-schools" target="_blank"
+              class="btn-secondary px-4 py-2 rounded-lg text-sm">
+              GitHub
+            </a>
+            <a href="https://webgis-schools.onrender.com/" target="_blank"
+              class="btn-primary px-4 py-2 rounded-lg text-sm">
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience Section -->
+  <section id="experience" class="max-w-6xl mx-auto px-6 py-16 relative" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-4 section-title">Professional Experience</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg">Designing and delivering production-grade geospatial solutions across aviation, environmental, and infrastructure domains</p>
+
+    <div class="space-y-8">
+      <!-- GIS Developer - ForbSpace -->
+      <div class="experience-card">
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <h3 class="text-xl font-bold">GIS Developer</h3>
+            <span class="text-accent-text font-semibold mt-1 md:mt-0">ForbSpace Inc. · Kitale, Kenya</span>
+          </div>
+          <p class="text-gray-400 mb-4">January 2025 – Present</p>
+          <ul class="list-none text-gray-300 space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Designed and deployed interactive web mapping platforms using Django/GeoDjango, PostGIS, Leaflet.js, HTML/CSS/JS.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Built clean, mobile-friendly map interfaces with real-time controls, filters, and clickable spatial elements.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Developed production-grade visual systems for infrastructure exploration and user actions.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GIS Developer (Freelance) -->
+      <div class="experience-card">
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <h3 class="text-xl font-bold">GIS Developer (Freelance)</h3>
+            <span class="text-accent-text font-semibold mt-1 md:mt-0">Remote</span>
+          </div>
+          <p class="text-gray-400 mb-4">March 2024 – December 2024</p>
+          <ul class="list-none text-gray-300 space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Developed WebGIS applications using Django + Leaflet, automating geoprocessing workflows.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Fine-tuned deep learning models achieving 85% accuracy in land-cover predictions.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Integrated geospatial APIs enhancing environmental research capabilities.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- GIS & Survey Intern -->
+      <div class="experience-card">
+        <div class="p-6">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+            <h3 class="text-xl font-bold">GIS & Survey Intern</h3>
+            <span class="text-accent-text font-semibold mt-1 md:mt-0">Survey of Kenya · Nairobi, Kenya</span>
+          </div>
+          <p class="text-gray-400 mb-4">May 2023 – August 2023</p>
+          <ul class="list-none text-gray-300 space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+              <span>Supported spatial database management and mapping workflows.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-16 relative" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-4 section-title">Technical Expertise</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg">
+      Focused on interactive web mapping and spatial infrastructure
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Core Web Mapping & Frontend -->
+      <div class="skill-card">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-map-marked-alt text-2xl accent-text mr-3"></i>
+          <h3 class="text-lg font-bold">Core Web Mapping & Frontend</h3>
+        </div>
+        <ul class="text-gray-300 space-y-2">
+          <li>HTML5, CSS3, JavaScript (ES6+)</li>
+          <li>Leaflet.js – interactive maps, markers, polygons</li>
+          <li>Mobile-first & fully responsive design</li>
+          <li>Clean UI/UX for visual dashboards</li>
+        </ul>
+      </div>
+
+      <!-- Backend & Spatial Databases -->
+      <div class="skill-card">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-server text-2xl accent-text mr-3"></i>
+          <h3 class="text-lg font-bold">Backend & Spatial Databases</h3>
+        </div>
+        <ul class="text-gray-300 space-y-2">
+          <li>Django & GeoDjango / Flask</li>
+          <li>PostgreSQL + PostGIS</li>
+          <li>RESTful APIs for dynamic updates</li>
+        </ul>
+      </div>
+
+      <!-- Tools & Libraries -->
+      <div class="skill-card">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-tools text-2xl accent-text mr-3"></i>
+          <h3 class="text-lg font-bold">Tools & Libraries</h3>
+        </div>
+        <ul class="text-gray-300 space-y-2">
+          <li>Git & GitHub deployment</li>
+          <li>Interactive controls (GPS, basemap toggle)</li>
+          <li>Clickable elements with direct actions</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-16 relative" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center mb-4 section-title">Get In Touch</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 text-lg">Available for web mapping projects, interactive dashboards, and visual landing-page development.</p>
+
+    <form action="https://formspree.io/f/manqpegn" method="POST" class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="name" class="block text-gray-300 text-sm font-medium mb-2">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required
+            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white transition-colors" />
+        </div>
+        <div>
+          <label for="email" class="block text-gray-300 text-sm font-medium mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required
+            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white transition-colors" />
+        </div>
+      </div>
+      <div class="mb-6">
+        <label for="message" class="block text-gray-300 text-sm font-medium mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required
+          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white transition-colors"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn-primary px-8 py-3 rounded-lg font-semibold text-lg">
+          Send Message
+        </button>
+      </div>
+      <div id="success-message" class="hidden text-center text-green-400 mt-4">
+        Your message has been sent successfully!
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 footer-bg relative z-50">
+    <div class="max-w-2xl mx-auto px-6 mb-8">
+      <h3 class="text-2xl font-bold mb-4">Ready to Collaborate</h3>
+      <p class="text-gray-400">Whether you need a simple infrastructure map, parking-lot visual system, or clean HTML/CSS/JS + Leaflet interface — I deliver fast and professional results.</p>
+    </div>
+    <div class="flex justify-center space-x-8 mb-6">
+      <a href="https://github.com/ClementNdome" target="_blank"
+        class="text-gray-300 hover:text-white text-2xl transition-colors">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/clement-ndome-a3b968354/" target="_blank"
+        class="text-gray-300 hover:text-white text-2xl transition-colors">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://spationex.com" target="_blank" class="text-gray-300 hover:text-white text-2xl transition-colors">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
+    <p class="text-gray-400">Clement Ndome © <span id="year"></span> | WebGIS & Interactive Mapping Development</p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 p-3 bg-blue-500 text-white rounded-full shadow-lg hidden transition-all hover:scale-110">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Update year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    AOS.init({ duration: 1000 });
+
+    // Theme Toggle with Improved Light Mode
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+    });
+
+    // Mobile Menu Toggle - Fixed
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let isMenuOpen = false;
+
+    // Function to toggle mobile menu visibility
+    function toggleMobileMenu() {
+      isMenuOpen = !isMenuOpen;
+
+      if (isMenuOpen) {
+        mobileMenu.classList.remove('hidden');
+        // Use setTimeout to ensure the display change has taken effect before adding the active class
+        setTimeout(() => {
+          mobileMenu.classList.add('active');
+        }, 10);
+        mobileToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    }
+
+    mobileToggle.addEventListener('click', toggleMobileMenu);
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        isMenuOpen = false;
+      });
+    });
+
+    // Handle responsive behavior
+    function handleResponsive() {
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        // Show mobile toggle, hide desktop menu
+        mobileToggle.classList.remove('hidden');
+        mobileToggle.classList.add('block');
+      } else {
+        // Hide mobile menu and toggle, show desktop menu
+        mobileMenu.classList.remove('active');
+        mobileMenu.classList.add('hidden');
+        mobileToggle.classList.remove('block');
+        mobileToggle.classList.add('hidden');
+        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        isMenuOpen = false;
+      }
+    }
+
+    // Initial call
+    handleResponsive();
+
+    // Listen for window resize
+    window.addEventListener('resize', handleResponsive);
+
+    // Back to Top
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTopButton.classList.toggle('hidden', window.scrollY < 300);
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Contact Form
+    const form = document.querySelector('form');
+    const successMessage = document.getElementById('success-message');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        successMessage.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => successMessage.classList.add('hidden'), 3000);
+      }
+    });
+  </script>
+</body>
+
+</html>
