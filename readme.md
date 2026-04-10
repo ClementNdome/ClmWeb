@@ -37,8 +37,7 @@ Spatial analytics system to assess education infrastructure distribution.
 
 ## 💼 Professional Summary
 
-**WebGIS Developer**
-I build fast, mobile-friendly interactive mapping applications with clean, satellite-style interfaces. Focused on real-time data, clickable workflows, and practical tools for infrastructure and planning.
+I deliver simple, high-impact WebGIS applications that turn spatial data into clear, actionable interfaces, optimized for speed, usability, and decision-making.
 
 **Currently:** GIS Developer at **ForbSpace Inc.**
 
